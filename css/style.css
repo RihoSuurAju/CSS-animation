@@ -1,0 +1,63 @@
+:root {
+    --notascool-color: rgba(114, 11, 83, 0.897);
+    --cool-color: rgba(87, 8, 63, 0.8);
+    --accent-maybe: rgba(221, 22, 72, 0.733);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mansalva', cursive;
+    font-size: 3rem;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--accent-maybe), var(--notascool-color))
+}
+
+a {
+    color: var(--accent-maybe);
+    opacity: 0.75;
+}
+
+.main-container {
+    border: 20px var(--accent-maybe);
+    height: 600px;
+    background-image: linear-gradient(to top, var(--accent-maybe), var(--cool-color)), url(https://images-na.ssl-images-amazon.com/images/I/41QwNL18FTL._SX425_.jpg);
+    background-size: top;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 30% 100%);
+    color: var(--cool-color);
+}
+
+.btn{
+    background-position: center;
+    display: inline-block;
+    color: var(--cool-color);
+    background-color: var(--notascool-color);
+    text-decoration: none;
+    padding: 1rem;
+    margin: 2rem;
+    border: 1px solid var(--accent-maybe);
+    transition-property: transform;
+    transition-duration: 2s;
+}
+.btn:hover {
+    transform: rotateY(360deg);
+}
+
+h2 {
+    animation-name: FadeTime;
+    animation-duration: 2s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+}
+
+@keyframes FadeTime {
+    0%{opacity: 0.1; color: var(--cool-color); }
+    25%{opacity: 0.5; color: var(--notascool-color); }
+    50%{opacity: 1; color: var(--accent-maybe)}
+    75%{opacity: 0.5; color: var(--notascool-color); }
+    100%{opacity: 0.1; color: var(--cool-color); }
+}
